@@ -1,5 +1,5 @@
 //
-//  AssignmentView.swift
+//  AssignmentMaker.swift
 //  Culminating - Assignment Tracker
 //
 //  Created by Doggett, Scott on 2020-05-29.
@@ -8,12 +8,15 @@
 
 import UIKit
 
-class AssignmentView: UIViewController {
+class AssignmentMaker: UIViewController {
 
     override func viewDidLoad() {
-        navigationItem.largeTitleDisplayMode = .never
-        
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
     }
+    
+
     /*
     // MARK: - Navigation
 
