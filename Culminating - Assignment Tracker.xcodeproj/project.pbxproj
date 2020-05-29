@@ -13,6 +13,7 @@
 		7DEF80BB247B19330061E2D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DEF80B9247B19330061E2D1 /* Main.storyboard */; };
 		7DEF80BD247B19340061E2D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DEF80BC247B19340061E2D1 /* Assets.xcassets */; };
 		7DEF80C0247B19340061E2D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DEF80BE247B19340061E2D1 /* LaunchScreen.storyboard */; };
+		7DFD76E0248189DF00F18631 /* AssignmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD76DF248189DF00F18631 /* AssignmentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7DEF80BC247B19340061E2D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DEF80BF247B19340061E2D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DEF80C1247B19340061E2D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DFD76DF248189DF00F18631 /* AssignmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				7DEF80B3247B19330061E2D1 /* AppDelegate.swift */,
 				7DEF80B5247B19330061E2D1 /* SceneDelegate.swift */,
 				7DEF80B7247B19330061E2D1 /* ViewController.swift */,
+				7DFD76DF248189DF00F18631 /* AssignmentView.swift */,
 				7DEF80B9247B19330061E2D1 /* Main.storyboard */,
 				7DEF80BC247B19340061E2D1 /* Assets.xcassets */,
 				7DEF80BE247B19340061E2D1 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				7DEF80B8247B19330061E2D1 /* ViewController.swift in Sources */,
 				7DEF80B4247B19330061E2D1 /* AppDelegate.swift in Sources */,
 				7DEF80B6247B19330061E2D1 /* SceneDelegate.swift in Sources */,
+				7DFD76E0248189DF00F18631 /* AssignmentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
