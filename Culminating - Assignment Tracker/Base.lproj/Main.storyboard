@@ -252,9 +252,6 @@
                         <viewLayoutGuide key="safeArea" id="JrO-IA-K3d"/>
                     </view>
                     <navigationItem key="navigationItem" id="A7B-HE-uOZ"/>
-                    <connections>
-                        <outlet property="assignmentName" destination="BoH-QQ-uhP" id="3qv-fi-NZe"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ruI-f5-WYp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

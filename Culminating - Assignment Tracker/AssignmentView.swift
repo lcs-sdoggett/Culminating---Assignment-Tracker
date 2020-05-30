@@ -13,7 +13,6 @@ class AssignmentView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
-        
     }
     /*
     // MARK: - Navigation
