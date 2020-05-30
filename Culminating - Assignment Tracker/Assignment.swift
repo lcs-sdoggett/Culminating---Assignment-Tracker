@@ -15,3 +15,4 @@ struct Assignment{
     let tasks: Int
     let date: Date
 }
+

@@ -9,9 +9,34 @@
 import UIKit
 
 class ViewController: UITableViewController {
+    
+    
+    //MARK: Properties
+    var assignments:[Assignment] = []
+    
+    //MARK: Methods
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        assignments.append(Assignment(name: "Assignemnt Test",
+                                      description: "description test",
+                                      tasks: 3,
+                                      date: Date()))
+        
+        assignments.append(Assignment(name: "Assignemnt Test 2",
+                                      description: "description test 2",
+                                      tasks: 6,
+                                      date: Date()))
+        
+        assignments.append(Assignment(name: "Assignemnt Test 3",
+                                      description: "description test 3",
+                                      tasks: 7,
+                                      date: Date()))
+
+
+        
         navigationController?.navigationBar.prefersLargeTitles = true
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
@@ -20,5 +45,13 @@ class ViewController: UITableViewController {
     @objc func addTapped() {
         performSegue(withIdentifier: "CreateAssignment", sender: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? AssignmentMaker {
+            vc.newAssignment = assignments[1]
+        }
+    }
+    
+    
 }
 

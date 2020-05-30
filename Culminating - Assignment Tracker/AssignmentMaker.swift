@@ -9,10 +9,17 @@
 import UIKit
 
 class AssignmentMaker: UIViewController {
-
+    
+    var newAssignment: Assignment = Assignment(name: "", description: "", tasks: 0, date: Date())
+    
+    @IBOutlet var assignmentName: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
+        
+        assignmentName.text = newAssignment.name
+        
     }
     
 
