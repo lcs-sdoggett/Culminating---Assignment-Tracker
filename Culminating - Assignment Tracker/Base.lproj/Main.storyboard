@@ -15,11 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="u62-Ul-2mV">
-                            <rect key="frame" x="0.0" y="99.5" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
-                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="NCH-C6-dqW" style="IBUITableViewCellStyleDefault" id="Xws-N7-e27">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
@@ -45,6 +40,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Assignments" id="Sgq-qX-Z7M"/>
+                    <connections>
+                        <segue destination="EH1-Km-cTT" kind="show" identifier="CreateAssignment" id="Tdc-yu-hec"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bc6-SU-hjX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -159,12 +157,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DuB-fn-VCI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1818.840579710145" y="131.91964285714286"/>
+            <point key="canvasLocation" x="2696" y="132"/>
         </scene>
         <!--Assignment Maker-->
         <scene sceneID="ttl-6B-oZS">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ruI-f5-WYp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="AssignmentMaker" id="EH1-Km-cTT" userLabel="Assignment Maker" customClass="AssignmentMaker" customModule="Culminating___Assignment_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Gh-Xh-PAW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -256,8 +253,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="A7B-HE-uOZ"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ruI-f5-WYp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2649" y="132"/>
+            <point key="canvasLocation" x="1862" y="132"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3Fl-jF-67a">

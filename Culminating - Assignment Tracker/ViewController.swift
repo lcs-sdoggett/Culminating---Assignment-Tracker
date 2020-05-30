@@ -13,7 +13,12 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
     }
-
+    
+    @objc func addTapped() {
+        performSegue(withIdentifier: "CreateAssignment", sender: nil)
+    }
 }
 
