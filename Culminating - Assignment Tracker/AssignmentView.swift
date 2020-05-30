@@ -11,6 +11,7 @@ import UIKit
 class AssignmentView: UIViewController {
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
         
     }
