@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
+class ViewController: UITableViewController, AssignmentSaver {
     
     
     //MARK: Properties
@@ -28,6 +28,22 @@ class ViewController: UITableViewController {
     @objc func addTapped() {
         performSegue(withIdentifier: "CreateAssignment", sender: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? AssignmentMaker {
+            
+            // Set this view controller as the delegate for the AssignmentMaker view controller
+            vc.delegate = self
+        }
+    }
+    
+    //MARK: AssignmentSaver Methods
+    func save(new: Assignment) {
+        
+        //Append new assignment to list of assignments
+        assignments.append(new)
+    }
+    
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if let vc = segue.destination as? AssignmentMaker {

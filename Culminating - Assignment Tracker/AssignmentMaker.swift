@@ -27,16 +27,34 @@ extension UIViewController
     }
 }
 
-
+// Types that adopt this protocol "promise" to implement the listed methods
+protocol AssignmentSaver {
+    
+    func save(new: Assignment)
+    
+}
 
 class AssignmentMaker: UIViewController {
 
+    // MARK: Properties
+    
+    var delegate: AssignmentSaver?
+    
+    // MARK: Outlets
+    
+    
+    
+    
+    
+    // MARK: Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
         
         setupToHideKeyboardOnTapOnView()
     }
+    
+    
     
     
     /*
