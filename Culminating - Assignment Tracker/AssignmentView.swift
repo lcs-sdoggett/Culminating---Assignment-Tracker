@@ -10,6 +10,21 @@ import UIKit
 
 class AssignmentView: UIViewController {
 
+    //MARK: Properties
+
+    //MARK: Outlets
+    
+    @IBOutlet var descriptionOutput: UILabel!
+    
+    @IBOutlet var tasksOutput: UILabel!
+    
+    @IBOutlet var percentOutput: UILabel!
+    
+    @IBOutlet var taskbarOutput: UIProgressView!
+    
+    @IBOutlet var urgencyOutput: UILabel!
+    
+    // MARK: Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never

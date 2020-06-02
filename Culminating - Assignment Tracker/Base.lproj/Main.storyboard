@@ -92,7 +92,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJu-nd-Jbk">
-                                <rect key="frame" x="21" y="309" width="265" height="30"/>
+                                <rect key="frame" x="21" y="311" width="265" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Tasks Completed">
@@ -154,6 +154,11 @@
                         <viewLayoutGuide key="safeArea" id="NP2-14-PKc"/>
                     </view>
                     <navigationItem key="navigationItem" title="Assignemnt A" id="JIs-mz-oPy"/>
+                    <connections>
+                        <outlet property="percentOutput" destination="PKD-MR-Dlz" id="FpK-qQ-rPe"/>
+                        <outlet property="tasksOutput" destination="oir-vu-xDq" id="4WK-W2-A4b"/>
+                        <outlet property="urgencyOutput" destination="GIq-cP-BGD" id="YJF-kN-cC8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DuB-fn-VCI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -246,16 +251,33 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="create:" destination="EH1-Km-cTT" eventType="touchUpInside" id="mpX-y9-0EA"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8c-Hr-8Ir">
+                                <rect key="frame" x="26" y="794" width="362" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="JrO-IA-K3d"/>
                     </view>
                     <navigationItem key="navigationItem" id="A7B-HE-uOZ"/>
+                    <connections>
+                        <outlet property="dateInput" destination="RBf-Gu-KZN" id="4TU-YN-bmH"/>
+                        <outlet property="descriptionInput" destination="3qA-ID-i49" id="nby-9y-mAr"/>
+                        <outlet property="errorOutput" destination="S8c-Hr-8Ir" id="U9M-QH-7ya"/>
+                        <outlet property="nameInput" destination="BoH-QQ-uhP" id="7eV-zL-9cR"/>
+                        <outlet property="taskInput" destination="20z-UU-bC1" id="hn0-ib-d7Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ruI-f5-WYp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1862" y="132"/>
+            <point key="canvasLocation" x="1860.8695652173915" y="131.91964285714286"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3Fl-jF-67a">

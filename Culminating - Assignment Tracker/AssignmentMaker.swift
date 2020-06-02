@@ -42,18 +42,50 @@ class AssignmentMaker: UIViewController {
     
     // MARK: Outlets
     
+    @IBOutlet var nameInput: UITextField!
     
+    @IBOutlet var descriptionInput: UITextField!
     
+    @IBOutlet var dateInput: UIDatePicker!
+    
+    @IBOutlet var taskInput: UITextField!
+    
+    @IBOutlet var errorOutput: UILabel!
     
     
     // MARK: Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
-        
+        errorOutput.text = ""
         setupToHideKeyboardOnTapOnView()
     }
     
+    
+    @IBAction func create(_ sender: Any) {
+        guard let nameOfAssignment = nameInput.text, !nameOfAssignment.isEmpty else {
+            errorOutput.text = "Enter All Values"
+            return
+        }
+        
+        guard let descriptionOfAssignment = descriptionInput.text, !descriptionOfAssignment.isEmpty else {
+            errorOutput.text = "Enter All Values"
+            return
+        }
+        
+        guard let tasksForAssignmentAsString = taskInput.text, !tasksForAssignmentAsString.isEmpty else {
+            errorOutput.text = "Enter All Values"
+            return
+        }
+        
+        guard let tasksForAssignment = Double(tasksForAssignmentAsString) else {
+            errorOutput.text = "Enter All Values"
+            return
+        }
+        
+    }
+    
+
     
     
     
