@@ -8,12 +8,37 @@
 
 import UIKit
 
+// Dismiss keyboard when we tap anywhere else
+extension UIViewController
+{
+    func setupToHideKeyboardOnTapOnView()
+    {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(UIViewController.dissmissKeyboard))
+        
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dissmissKeyboard()
+    {
+        view.endEditing(true)
+    }
+}
+
+
+
 class AssignmentMaker: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
+        
+        setupToHideKeyboardOnTapOnView()
     }
+    
+    
     /*
     // MARK: - Navigation
 

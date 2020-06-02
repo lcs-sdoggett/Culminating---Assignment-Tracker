@@ -14,6 +14,8 @@ class AssignmentView: UIViewController {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
     }
+    
+    
     /*
     // MARK: - Navigation
 
