@@ -109,12 +109,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="increaseTasks:" destination="nPE-CN-fsd" eventType="touchUpInside" id="jp3-H2-aBW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1c-Kf-clT">
                                 <rect key="frame" x="153" y="379" width="30" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="decreaseTasks:" destination="nPE-CN-fsd" eventType="touchUpInside" id="azc-Yr-RPe"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oir-vu-xDq" userLabel="number of completed tasks">
                                 <rect key="frame" x="203" y="385" width="17" height="32"/>
@@ -155,9 +161,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Assignemnt A" id="JIs-mz-oPy"/>
                     <connections>
-                        <outlet property="percentOutput" destination="PKD-MR-Dlz" id="FpK-qQ-rPe"/>
-                        <outlet property="tasksOutput" destination="oir-vu-xDq" id="4WK-W2-A4b"/>
-                        <outlet property="urgencyOutput" destination="GIq-cP-BGD" id="YJF-kN-cC8"/>
+                        <outlet property="descriptionOutput" destination="9Iw-eY-8Qx" id="Kp2-8f-dqX"/>
+                        <outlet property="percentageOutput" destination="PKD-MR-Dlz" id="0Op-y9-MOo"/>
+                        <outlet property="progressBar" destination="9NO-WM-HD4" id="WwL-w3-9Pr"/>
+                        <outlet property="tasksOutput" destination="oir-vu-xDq" id="19M-NG-puw"/>
+                        <outlet property="urgencyOutput" destination="GIq-cP-BGD" id="9VX-qP-BqC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DuB-fn-VCI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -18,17 +18,26 @@ class AssignmentView: UIViewController {
     
     @IBOutlet var tasksOutput: UILabel!
     
-    @IBOutlet var percentOutput: UILabel!
+    @IBOutlet var percentageOutput: UILabel!
     
-    @IBOutlet var taskbarOutput: UIProgressView!
+    @IBOutlet var progressBar: UIProgressView!
     
     @IBOutlet var urgencyOutput: UILabel!
+    
     
     // MARK: Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
     }
+    
+    @IBAction func increaseTasks(_ sender: Any) {
+    }
+    
+    @IBAction func decreaseTasks(_ sender: Any) {
+    }
+    
+    
     
     
     /*
