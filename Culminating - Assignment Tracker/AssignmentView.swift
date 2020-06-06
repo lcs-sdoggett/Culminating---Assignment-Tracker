@@ -37,6 +37,8 @@ class AssignmentView: UIViewController {
     
     var viewDate: Int = 0
     
+    var viewTasksCompleted = 0
+    
     
     // MARK: Methods
     override func viewDidLoad() {
@@ -49,31 +51,30 @@ class AssignmentView: UIViewController {
         
     }
     
-    
+    // Set description label
     func setDescription() {
         descriptionOutput.text = viewDescription
     }
     
+    // Set task label
     func setTask() {
-        let viewTasksAsString = String(viewTasks)
-        tasksOutput.text = viewTasksAsString
+        let viewTasksCompletedAsString = String(viewTasksCompleted)
+        tasksOutput.text = viewTasksCompletedAsString
     }
     
+    // Set name label
     func setName() {
         nameOutput.text = viewName
     }
     
-    
-    
-    
-    
+    // Increase tasks
     @IBAction func increaseTasks(_ sender: Any) {
-        viewTasks += 1
+        viewTasksCompleted += 1
         setTask()
     }
     
     @IBAction func decreaseTasks(_ sender: Any) {
-        viewTasks -= 1
+        viewTasksCompleted -= 1
         setTask()
 
     }

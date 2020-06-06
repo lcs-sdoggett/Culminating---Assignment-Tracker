@@ -14,5 +14,6 @@ struct Assignment{
     let description : String
     let tasks: Int
     let date: Int
+    let tasksCompleted: Int
 }
 

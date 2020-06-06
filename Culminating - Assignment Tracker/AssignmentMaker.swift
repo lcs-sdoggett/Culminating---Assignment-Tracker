@@ -101,7 +101,7 @@ class AssignmentMaker: UIViewController {
         }
         
         // Create the assignment with variables
-        let newAssignment = Assignment(name: nameOfAssignment, description: descriptionOfAssignment, tasks: tasksOfAssignment, date: dateOfAssignment)
+        let newAssignment = Assignment(name: nameOfAssignment, description: descriptionOfAssignment, tasks: tasksOfAssignment, date: dateOfAssignment, tasksCompleted: 0)
         
         // Send it to view controller
         delegate?.save(new: newAssignment)

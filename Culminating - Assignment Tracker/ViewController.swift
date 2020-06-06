@@ -54,6 +54,10 @@ class ViewController: UITableViewController, AssignmentSaver {
             var viewDate = assignments[0].date
             childController.viewDate = viewDate
             
+            //Set variable to desired value, and send it to AssignmentView
+            var viewTasksCompleted = assignments[0].tasksCompleted
+            childController.viewTasksCompleted = viewTasksCompleted
+            
         }
     }
     
