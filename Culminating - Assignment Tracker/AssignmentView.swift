@@ -14,6 +14,8 @@ class AssignmentView: UIViewController {
 
     //MARK: Outlets
     
+    @IBOutlet var nameOutput: UILabel!
+    
     @IBOutlet var descriptionOutput: UILabel!
     
     @IBOutlet var tasksOutput: UILabel!
@@ -40,12 +42,40 @@ class AssignmentView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
+        
+        setDescription()
+        setTask()
+        setName()
+        
     }
     
+    
+    func setDescription() {
+        descriptionOutput.text = viewDescription
+    }
+    
+    func setTask() {
+        let viewTasksAsString = String(viewTasks)
+        tasksOutput.text = viewTasksAsString
+    }
+    
+    func setName() {
+        nameOutput.text = viewName
+    }
+    
+    
+    
+    
+    
     @IBAction func increaseTasks(_ sender: Any) {
+        viewTasks += 1
+        setTask()
     }
     
     @IBAction func decreaseTasks(_ sender: Any) {
+        viewTasks -= 1
+        setTask()
+
     }
     
     

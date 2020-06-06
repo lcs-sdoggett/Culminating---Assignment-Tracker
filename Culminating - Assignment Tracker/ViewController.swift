@@ -30,14 +30,29 @@ class ViewController: UITableViewController, AssignmentSaver {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? AssignmentMaker {
+        if let childController = segue.destination as? AssignmentMaker {
             
             // Set this view controller as the delegate for the AssignmentMaker view controller
-            vc.delegate = self
+            childController.delegate = self
         }
         
-        if let vc = segue.destination as? AssignmentView {
+        if let childController = segue.destination as? AssignmentView {
             
+            //Set variable to desired value, and send it to AssignmentView
+            var viewName = assignments[0].name
+            childController.viewName = viewName
+            
+            //Set variable to desired value, and send it to AssignmentView
+            var viewDescription = assignments[0].description
+            childController.viewDescription = viewDescription
+            
+            //Set variable to desired value, and send it to AssignmentView
+            var viewTasks = assignments[0].tasks
+            childController.viewTasks = viewTasks
+            
+            //Set variable to desired value, and send it to AssignmentView
+            var viewDate = assignments[0].date
+            childController.viewDate = viewDate
             
         }
     }
