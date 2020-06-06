@@ -50,17 +50,22 @@ class AssignmentView: UIViewController {
         update()
     }
     
+    // Set description label
+    func setDescription() {
+        descriptionOutput.text = viewDescription
+    }
+    
+    // Set name label
+       func setName() {
+           nameOutput.text = viewName
+       }
+    
     // Update based on tasks
     func update() {
         setTasksCompleted()
         setProgressBar()
         setPercentProgress()
-    }
-    
-    
-    // Set description label
-    func setDescription() {
-        descriptionOutput.text = viewDescription
+        setUrgencyLabel()
     }
     
     // Set task label
@@ -69,23 +74,20 @@ class AssignmentView: UIViewController {
         tasksOutput.text = viewTasksCompletedAsString
     }
     
-    // Set name label
-    func setName() {
-        nameOutput.text = viewName
-    }
-    
     // Set propress bar
     func setProgressBar() {
-        
         let progress = Float(viewTasksCompleted) / Float(viewTasks)
         progressBar.progress = progress
     }
     
     // Set percent label
     func setPercentProgress() {
-        
         let progress = Int(100 * (Float(viewTasksCompleted) / Float(viewTasks)))
         percentageOutput.text = "\(progress)%"
+    }
+    
+    func setUrgencyLabel() {
+        urgencyOutput.text = "Task is not very urgent"
     }
     
     // Increase tasks
