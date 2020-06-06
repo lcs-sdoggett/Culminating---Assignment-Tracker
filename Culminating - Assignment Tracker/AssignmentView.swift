@@ -41,17 +41,22 @@ class AssignmentView: UIViewController {
     
     
     // MARK: Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
-        
         setDescription()
-        setTask()
         setName()
+        update()
+    }
+    
+    // Update based on tasks
+    func update() {
+        setTasksCompleted()
         setProgressBar()
         setPercentProgress()
-        
     }
+    
     
     // Set description label
     func setDescription() {
@@ -59,7 +64,7 @@ class AssignmentView: UIViewController {
     }
     
     // Set task label
-    func setTask() {
+    func setTasksCompleted() {
         let viewTasksCompletedAsString = String(viewTasksCompleted)
         tasksOutput.text = viewTasksCompletedAsString
     }
@@ -76,12 +81,10 @@ class AssignmentView: UIViewController {
         progressBar.progress = progress
     }
     
-    
     // Set percent label
-    
     func setPercentProgress() {
         
-        let progress = 100 * (Float(viewTasksCompleted) / Float(viewTasks))
+        let progress = Int(100 * (Float(viewTasksCompleted) / Float(viewTasks)))
         percentageOutput.text = "\(progress)%"
     }
     
@@ -94,9 +97,7 @@ class AssignmentView: UIViewController {
         } else {
             // If there are more tasks to be completed, add 1 to completed tasks and update everythinng
             viewTasksCompleted += 1
-            setTask()
-            setProgressBar()
-            setPercentProgress()
+            update()
         }
         
     }
@@ -110,9 +111,7 @@ class AssignmentView: UIViewController {
         } else {
             // If there are more then 1 tasks completed, subtract 1 to completed tasks and update everythinng
             viewTasksCompleted -= 1
-            setTask()
-            setProgressBar()
-            setPercentProgress()
+            update()
         }
     }
     
