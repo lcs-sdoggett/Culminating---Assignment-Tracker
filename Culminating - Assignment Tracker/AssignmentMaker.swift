@@ -46,7 +46,7 @@ class AssignmentMaker: UIViewController {
     
     @IBOutlet var descriptionInput: UITextField!
     
-    @IBOutlet var dateInput: UIDatePicker!
+    @IBOutlet var dateInput: UITextField!
     
     @IBOutlet var taskInput: UITextField!
     
@@ -73,16 +73,31 @@ class AssignmentMaker: UIViewController {
             return
         }
         
-        guard let tasksForAssignmentAsString = taskInput.text, !tasksForAssignmentAsString.isEmpty else {
+        guard let tasksOfAssignmentAsString = taskInput.text, !tasksOfAssignmentAsString.isEmpty else {
             errorOutput.text = "Enter All Values"
             return
         }
         
-        guard let tasksForAssignment = Double(tasksForAssignmentAsString) else {
+        guard let tasksOfAssignment = Int(tasksOfAssignmentAsString) else {
             errorOutput.text = "Enter All Values"
             return
         }
         
+        guard let dateOfAssignmentAsString = dateInput.text, !dateOfAssignmentAsString.isEmpty else {
+            errorOutput.text = "Enter All Values"
+            return
+        }
+        
+        guard let dateOfAssignment = Int(dateOfAssignmentAsString) else {
+            errorOutput.text = "Enter All Values"
+            return
+        }
+        
+        let newAssignment = Assignment(name: nameOfAssignment, description: descriptionOfAssignment, tasks: tasksOfAssignment, date: dateOfAssignment)
+        
+        delegate?.save(new: newAssignment)
+        
+        self.navigationController?.popViewController(animated: true)
     }
     
 

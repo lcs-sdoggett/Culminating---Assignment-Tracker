@@ -25,6 +25,17 @@ class AssignmentView: UIViewController {
     @IBOutlet var urgencyOutput: UILabel!
     
     
+    //MARK: Properties
+    
+    var viewName: String = ""
+    
+    var viewDescription: String = ""
+    
+    var viewTasks: Int = 0
+    
+    var viewDate: Int = 0
+    
+    
     // MARK: Methods
     override func viewDidLoad() {
         super.viewDidLoad()

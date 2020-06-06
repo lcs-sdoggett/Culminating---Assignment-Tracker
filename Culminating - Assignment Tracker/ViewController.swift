@@ -35,6 +35,11 @@ class ViewController: UITableViewController, AssignmentSaver {
             // Set this view controller as the delegate for the AssignmentMaker view controller
             vc.delegate = self
         }
+        
+        if let vc = segue.destination as? AssignmentView {
+            
+            
+        }
     }
     
     //MARK: AssignmentSaver Methods
