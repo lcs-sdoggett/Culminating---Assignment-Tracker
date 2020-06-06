@@ -48,6 +48,8 @@ class AssignmentView: UIViewController {
         setDescription()
         setTask()
         setName()
+        setProgressBar()
+        setPercentProgress()
         
     }
     
@@ -67,16 +69,51 @@ class AssignmentView: UIViewController {
         nameOutput.text = viewName
     }
     
-    // Increase tasks
-    @IBAction func increaseTasks(_ sender: Any) {
-        viewTasksCompleted += 1
-        setTask()
+    // Set propress bar
+    func setProgressBar() {
+        
+        let progress = Float(viewTasksCompleted) / Float(viewTasks)
+        progressBar.progress = progress
     }
     
+    
+    // Set percent label
+    
+    func setPercentProgress() {
+        
+        let progress = 100 * (Float(viewTasksCompleted) / Float(viewTasks))
+        percentageOutput.text = "\(progress)%"
+    }
+    
+    // Increase tasks
+    @IBAction func increaseTasks(_ sender: Any) {
+        
+        // If they are trying to increase the completed tasks when it is 100%, dont increase
+        if viewTasksCompleted == viewTasks {
+            
+        } else {
+            // If there are more tasks to be completed, add 1 to completed tasks and update everythinng
+            viewTasksCompleted += 1
+            setTask()
+            setProgressBar()
+            setPercentProgress()
+        }
+        
+    }
+    
+    
     @IBAction func decreaseTasks(_ sender: Any) {
-        viewTasksCompleted -= 1
-        setTask()
-
+        
+        // If they are trying to decrease the completed tasks when it is 0%, dont decrease
+        if viewTasksCompleted == 0 {
+            
+        } else {
+            // If there are more then 1 tasks completed, subtract 1 to completed tasks and update everythinng
+            viewTasksCompleted -= 1
+            setTask()
+            setProgressBar()
+            setPercentProgress()
+        }
     }
     
     
