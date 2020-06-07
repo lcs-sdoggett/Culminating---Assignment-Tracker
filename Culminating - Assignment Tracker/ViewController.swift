@@ -30,6 +30,41 @@ class ViewController: UITableViewController, AssignmentSaver {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // 1: try loading the "Detail" view controller and typecasting it to be DetailViewController
+        if let childController = storyboard?.instantiateViewController(withIdentifier: "AssignmentView") as? AssignmentView {
+            // 2: success! Set its selectedImage property
+            
+            //Set variable to desired value, and send it to AssignmentView
+            var viewName = assignments[0].name
+            childController.viewName = viewName
+            
+            //Set variable to desired value, and send it to AssignmentView
+            var viewDescription = assignments[0].description
+            childController.viewDescription = viewDescription
+            
+            //Set variable to desired value, and send it to AssignmentView
+            var viewTasks = assignments[0].tasks
+            childController.viewTasks = viewTasks
+            
+            //Set variable to desired value, and send it to AssignmentView
+            var viewDate = assignments[0].date
+            childController.viewDate = viewDate
+            
+            //Set variable to desired value, and send it to AssignmentView
+            var viewTasksCompleted = assignments[0].tasksCompleted
+            childController.viewTasksCompleted = viewTasksCompleted
+
+            // 3: now push it onto the navigation controller
+            navigationController?.pushViewController(childController, animated: true)
+        }
+    }
+    
+    
+    
+    
+    
+    
     //MARK: Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,30 +86,6 @@ class ViewController: UITableViewController, AssignmentSaver {
             
             // Set this view controller as the delegate for the AssignmentMaker view controller
             childController.delegate = self
-        }
-        
-        if let childController = segue.destination as? AssignmentView {
-            
-            //Set variable to desired value, and send it to AssignmentView
-            var viewName = assignments[0].name
-            childController.viewName = viewName
-            
-            //Set variable to desired value, and send it to AssignmentView
-            var viewDescription = assignments[0].description
-            childController.viewDescription = viewDescription
-            
-            //Set variable to desired value, and send it to AssignmentView
-            var viewTasks = assignments[0].tasks
-            childController.viewTasks = viewTasks
-            
-            //Set variable to desired value, and send it to AssignmentView
-            var viewDate = assignments[0].date
-            childController.viewDate = viewDate
-            
-            //Set variable to desired value, and send it to AssignmentView
-            var viewTasksCompleted = assignments[0].tasksCompleted
-            childController.viewTasksCompleted = viewTasksCompleted
-            
         }
     }
     
