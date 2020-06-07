@@ -60,11 +60,6 @@ class ViewController: UITableViewController, AssignmentSaver {
         }
     }
     
-    
-    
-    
-    
-    
     //MARK: Methods
     override func viewDidLoad() {
         super.viewDidLoad()

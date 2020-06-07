@@ -82,8 +82,9 @@ class AssignmentView: UIViewController {
     
     // Set percent label
     func setPercentProgress() {
-        let progress = Int(100 * (Float(viewTasksCompleted) / Float(viewTasks)))
-        percentageOutput.text = "\(progress)%"
+        let progress = 100 * (Float(viewTasksCompleted) / Float(viewTasks))
+        let roundedProgress = Int(round(progress))
+        percentageOutput.text = "\(roundedProgress)%"
     }
     
     func setUrgencyLabel() {
