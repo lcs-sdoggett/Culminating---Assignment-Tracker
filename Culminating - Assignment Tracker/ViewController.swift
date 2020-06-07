@@ -15,8 +15,7 @@ class ViewController: UITableViewController, AssignmentSaver, AssignmentChange {
     var assignments:[Assignment] = []
     
     
-    let test1 = Assignment(name: "Test 1", description: "This is the First Assignment. This has been preprogrammed", tasks: 8, date: 5, tasksCompleted: 0, assignmentNumber: 0)
-    let test2 = Assignment(name: "Test 2", description: "This is the Second Assignment. This has been preprogrammed", tasks: 5, date: 5, tasksCompleted: 0, assignmentNumber: 0)
+    let Example = Assignment(name: "Example", description: "This is what one of you assignments will look like. Press the plus button when you have completed a task.", tasks: 8, date: 5, tasksCompleted: 0, assignmentNumber: 0)
 
     
     //MARK: Table View
@@ -90,8 +89,7 @@ class ViewController: UITableViewController, AssignmentSaver, AssignmentChange {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        assignments.append(test1)
-        assignments.append(test2)
+        assignments.append(Example)
         
         // Makes title big
         navigationController?.navigationBar.prefersLargeTitles = true
