@@ -39,6 +39,8 @@ class AssignmentView: UIViewController {
     
     var viewTasksCompleted = 0
     
+    var viewAssignmentNumber = 0
+    
     
     // MARK: Methods
     

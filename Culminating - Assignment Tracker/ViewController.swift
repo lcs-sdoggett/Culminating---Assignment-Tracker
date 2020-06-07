@@ -14,8 +14,8 @@ class ViewController: UITableViewController, AssignmentSaver {
     //MARK: Properties
     var assignments:[Assignment] = []
     
-    let test1 = Assignment(name: "Test 1", description: "This is the First Assignment. This has been preprogrammed", tasks: 8, date: 5, tasksCompleted: 0)
-    let test2 = Assignment(name: "Test 2", description: "This is the Second Assignment. This has been preprogrammed", tasks: 5, date: 5, tasksCompleted: 0)
+    let test1 = Assignment(name: "Test 1", description: "This is the First Assignment. This has been preprogrammed", tasks: 8, date: 5, tasksCompleted: 0, assignmentNumber: 0)
+    let test2 = Assignment(name: "Test 2", description: "This is the Second Assignment. This has been preprogrammed", tasks: 5, date: 5, tasksCompleted: 0, assignmentNumber: 0)
 
     
     //MARK: Table View
@@ -54,6 +54,9 @@ class ViewController: UITableViewController, AssignmentSaver {
             //Set variable to desired value, and send it to AssignmentView
             let viewTasksCompleted = assignments[indexPath.row].tasksCompleted
             childController.viewTasksCompleted = viewTasksCompleted
+            
+            let viewAssignmentNumber = assignments[indexPath.row].assignmentNumber
+            childController.viewTasksCompleted = viewAssignmentNumber
 
             // 3: now push it onto the navigation controller
             navigationController?.pushViewController(childController, animated: true)
