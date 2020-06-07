@@ -21,20 +21,24 @@ class ViewController: UITableViewController, AssignmentSaver, AssignmentChange {
     
     //MARK: Table View
     
+    // Decides number of cells
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return assignments.count
     }
     
+    // Names the cells
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = assignments[indexPath.row].name
         return cell
     }
     
+    // Makes editing possible
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     
+    // If you swipe and click delete, it will delete from the array and be removed from the table view
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
@@ -47,6 +51,7 @@ class ViewController: UITableViewController, AssignmentSaver, AssignmentChange {
         
     }
     
+    // Passes information to the assignment view after table view cell is clicked
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 1: try loading the "Detail" view controller and typecasting it to be DetailViewController
         if let childController = storyboard?.instantiateViewController(withIdentifier: "AssignmentView") as? AssignmentView {
@@ -73,8 +78,8 @@ class ViewController: UITableViewController, AssignmentSaver, AssignmentChange {
             let viewTasksCompleted = assignments[indexPath.row].tasksCompleted
             childController.viewTasksCompleted = viewTasksCompleted
             
-            let viewAssignmentNumber = assignments[indexPath.row].assignmentNumber
-            childController.viewTasksCompleted = viewAssignmentNumber
+            let viewAssignmentNumber = indexPath.row
+            childController.viewAssignmentNumber = viewAssignmentNumber
 
             // 3: now push it onto the navigation controller
             navigationController?.pushViewController(childController, animated: true)
@@ -88,11 +93,14 @@ class ViewController: UITableViewController, AssignmentSaver, AssignmentChange {
         assignments.append(test1)
         assignments.append(test2)
         
+        // Makes title big
         navigationController?.navigationBar.prefersLargeTitles = true
         
+        // Creates + button
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
     }
     
+    // Goes to assignment maker when button is pressed
     @objc func addTapped() {
         performSegue(withIdentifier: "CreateAssignment", sender: nil)
     }
@@ -105,7 +113,7 @@ class ViewController: UITableViewController, AssignmentSaver, AssignmentChange {
         }
     }
     
-    //MARK: AssignmentSaver Methods
+    //MARK: AssignmentSaver and AssignmentChange Methods
     func save(new: Assignment) {
         
         //Append new assignment to list of assignments
@@ -117,6 +125,7 @@ class ViewController: UITableViewController, AssignmentSaver, AssignmentChange {
         tableView.endUpdates()
     }
     
+    // Recieves information about the change
     func change(new: Changes) {
         assignments[new.assignmentNumber].tasksCompleted = new.tasksCompleted
     }
