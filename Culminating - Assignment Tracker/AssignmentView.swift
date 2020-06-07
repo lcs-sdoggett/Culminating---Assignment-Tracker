@@ -68,7 +68,6 @@ class AssignmentView: UIViewController {
     
     // Update based on tasks
     func update() {
-        print("The completed tasks is \(viewTasksCompleted)")
         setTasksCompleted()
         setProgressBar()
         setPercentProgress()
@@ -124,9 +123,6 @@ class AssignmentView: UIViewController {
             update()
         }
     }
-    
-    
-    
     
     /*
     // MARK: - Navigation

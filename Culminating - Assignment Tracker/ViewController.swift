@@ -55,7 +55,6 @@ class ViewController: UITableViewController, AssignmentSaver, AssignmentChange {
             //Set variable to desired value, and send it to AssignmentView
             let viewTasksCompleted = assignments[indexPath.row].tasksCompleted
             childController.viewTasksCompleted = viewTasksCompleted
-            print("The number of tasks completed getting sent to assignment view is \(viewTasksCompleted)")
             
             let viewAssignmentNumber = assignments[indexPath.row].assignmentNumber
             childController.viewTasksCompleted = viewAssignmentNumber
