@@ -15,7 +15,7 @@ class ViewController: UITableViewController, AssignmentSaver, AssignmentChange {
     var assignments:[Assignment] = []
     
     
-    let Example = Assignment(name: "Example", description: "This is what one of you assignments will look like. Press the plus button when you have completed a task.", tasks: 8, date: 5, tasksCompleted: 0, assignmentNumber: 0)
+    let Example = Assignment(name: "Example", description: "This is what one of you assignments will look like. Press the plus button when you have completed a task.", tasks: 8, daysTillDue: 5, tasksCompleted: 0, assignmentNumber: 0)
 
     
     //MARK: Table View
@@ -70,8 +70,8 @@ class ViewController: UITableViewController, AssignmentSaver, AssignmentChange {
             childController.viewTasks = viewTasks
             
             //Set variable to desired value, and send it to AssignmentView
-            let viewDate = assignments[indexPath.row].date
-            childController.viewDate = viewDate
+            let viewDaysTillDue = assignments[indexPath.row].daysTillDue
+            childController.viewDaysTillDue = viewDaysTillDue
             
             //Set variable to desired value, and send it to AssignmentView
             let viewTasksCompleted = assignments[indexPath.row].tasksCompleted

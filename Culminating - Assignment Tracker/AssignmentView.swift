@@ -38,7 +38,7 @@ class AssignmentView: UIViewController {
     
     var viewTasks: Int = 0
     
-    var viewDate: Int = 0
+    var viewDaysTillDue: Int = 0
     
     var viewTasksCompleted: Int = 0
     
