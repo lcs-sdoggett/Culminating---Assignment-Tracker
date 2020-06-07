@@ -14,6 +14,7 @@ class ViewController: UITableViewController, AssignmentSaver, AssignmentChange {
     //MARK: Properties
     var assignments:[Assignment] = []
     
+    
     let test1 = Assignment(name: "Test 1", description: "This is the First Assignment. This has been preprogrammed", tasks: 8, date: 5, tasksCompleted: 0, assignmentNumber: 0)
     let test2 = Assignment(name: "Test 2", description: "This is the Second Assignment. This has been preprogrammed", tasks: 5, date: 5, tasksCompleted: 0, assignmentNumber: 0)
 
@@ -93,6 +94,11 @@ class ViewController: UITableViewController, AssignmentSaver, AssignmentChange {
         
         //Append new assignment to list of assignments
         assignments.append(new)
+        
+        let indexPath = IndexPath(row: assignments.count - 1, section: 0)
+        tableView.beginUpdates()
+        tableView.insertRows(at: [indexPath], with: .automatic)
+        tableView.endUpdates()
     }
     
     func change(new: Changes) {
