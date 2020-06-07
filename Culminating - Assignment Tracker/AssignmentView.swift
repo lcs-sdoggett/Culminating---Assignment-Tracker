@@ -8,9 +8,12 @@
 
 import UIKit
 
-class AssignmentView: UIViewController {
+protocol AssignmentChange {
+    
+    func change()
+}
 
-    //MARK: Properties
+class AssignmentView: UIViewController {
 
     //MARK: Outlets
     
@@ -41,6 +44,7 @@ class AssignmentView: UIViewController {
     
     var viewAssignmentNumber = 0
     
+    var delegate: AssignmentChange?
     
     // MARK: Methods
     
@@ -68,6 +72,7 @@ class AssignmentView: UIViewController {
         setProgressBar()
         setPercentProgress()
         setUrgencyLabel()
+        delegate?.change()
     }
     
     // Set task label

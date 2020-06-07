@@ -9,8 +9,8 @@
 import UIKit
 
 // Dismiss keyboard when we tap anywhere else
-extension UIViewController
-{
+extension UIViewController{
+    
     func setupToHideKeyboardOnTapOnView()
     {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(
@@ -21,8 +21,7 @@ extension UIViewController
         view.addGestureRecognizer(tap)
     }
     
-    @objc func dissmissKeyboard()
-    {
+    @objc func dissmissKeyboard() {
         view.endEditing(true)
     }
 }

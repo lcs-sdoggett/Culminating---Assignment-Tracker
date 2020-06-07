@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UITableViewController, AssignmentSaver {
+class ViewController: UITableViewController, AssignmentSaver, AssignmentChange {
     
     
     //MARK: Properties
@@ -33,7 +33,8 @@ class ViewController: UITableViewController, AssignmentSaver {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 1: try loading the "Detail" view controller and typecasting it to be DetailViewController
         if let childController = storyboard?.instantiateViewController(withIdentifier: "AssignmentView") as? AssignmentView {
-            // 2: success! Set its selectedImage property
+            
+            childController.delegate = self
             
             //Set variable to desired value, and send it to AssignmentView
             let viewName = assignments[indexPath.row].name
@@ -92,6 +93,10 @@ class ViewController: UITableViewController, AssignmentSaver {
         
         //Append new assignment to list of assignments
         assignments.append(new)
+    }
+    
+    func  change() {
+        print("It works")
     }
     
     
