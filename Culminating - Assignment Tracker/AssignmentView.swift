@@ -99,7 +99,6 @@ class AssignmentView: UIViewController {
             viewTasksCompleted += 1
             update()
         }
-        
     }
     
     // Decrease tasks

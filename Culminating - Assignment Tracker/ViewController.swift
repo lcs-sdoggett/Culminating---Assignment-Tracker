@@ -14,8 +14,8 @@ class ViewController: UITableViewController, AssignmentSaver {
     //MARK: Properties
     var assignments:[Assignment] = []
     
-    let test1 = Assignment(name: "hi", description: "test", tasks: 4, date: 43, tasksCompleted: 0)
-    let test2 = Assignment(name: "hello", description: "test", tasks: 4, date: 43, tasksCompleted: 0)
+    let test1 = Assignment(name: "Test 1", description: "This is the First Assignment. This has been preprogrammed", tasks: 8, date: 5, tasksCompleted: 0)
+    let test2 = Assignment(name: "Test 2", description: "This is the Second Assignment. This has been preprogrammed", tasks: 5, date: 5, tasksCompleted: 0)
 
     
     //MARK: Table View

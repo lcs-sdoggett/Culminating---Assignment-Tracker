@@ -31,7 +31,6 @@ extension UIViewController
 protocol AssignmentSaver {
     
     func save(new: Assignment)
-    
 }
 
 class AssignmentMaker: UIViewController {
