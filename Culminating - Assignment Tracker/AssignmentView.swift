@@ -95,10 +95,7 @@ class AssignmentView: UIViewController {
     @IBAction func increaseTasks(_ sender: Any) {
         
         // If they are trying to increase the completed tasks when it is 100%, dont increase
-        if viewTasksCompleted == viewTasks {
-            
-        } else {
-            // If there are more tasks to be completed, add 1 to completed tasks and update everythinng
+        if viewTasksCompleted != viewTasks {
             viewTasksCompleted += 1
             update()
         }
@@ -109,10 +106,7 @@ class AssignmentView: UIViewController {
     @IBAction func decreaseTasks(_ sender: Any) {
         
         // If they are trying to decrease the completed tasks when it is 0%, dont decrease
-        if viewTasksCompleted == 0 {
-            
-        } else {
-            // If there are more then 1 tasks completed, subtract 1 to completed tasks and update everythinng
+        if viewTasksCompleted != 0 {
             viewTasksCompleted -= 1
             update()
         }
