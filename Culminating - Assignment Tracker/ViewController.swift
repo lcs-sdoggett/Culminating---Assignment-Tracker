@@ -36,23 +36,23 @@ class ViewController: UITableViewController, AssignmentSaver {
             // 2: success! Set its selectedImage property
             
             //Set variable to desired value, and send it to AssignmentView
-            var viewName = assignments[0].name
+            let viewName = assignments[indexPath.row].name
             childController.viewName = viewName
             
             //Set variable to desired value, and send it to AssignmentView
-            var viewDescription = assignments[0].description
+            let viewDescription = assignments[indexPath.row].description
             childController.viewDescription = viewDescription
             
             //Set variable to desired value, and send it to AssignmentView
-            var viewTasks = assignments[0].tasks
+            let viewTasks = assignments[indexPath.row].tasks
             childController.viewTasks = viewTasks
             
             //Set variable to desired value, and send it to AssignmentView
-            var viewDate = assignments[0].date
+            let viewDate = assignments[indexPath.row].date
             childController.viewDate = viewDate
             
             //Set variable to desired value, and send it to AssignmentView
-            var viewTasksCompleted = assignments[0].tasksCompleted
+            let viewTasksCompleted = assignments[indexPath.row].tasksCompleted
             childController.viewTasksCompleted = viewTasksCompleted
 
             // 3: now push it onto the navigation controller
