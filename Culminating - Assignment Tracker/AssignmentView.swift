@@ -10,7 +10,7 @@ import UIKit
 
 protocol AssignmentChange {
     
-    func change()
+    func change(new: Changes)
 }
 
 class AssignmentView: UIViewController {
@@ -40,9 +40,9 @@ class AssignmentView: UIViewController {
     
     var viewDate: Int = 0
     
-    var viewTasksCompleted = 0
+    var viewTasksCompleted: Int = 0
     
-    var viewAssignmentNumber = 0
+    var viewAssignmentNumber: Int = 0
     
     var delegate: AssignmentChange?
     
@@ -68,11 +68,12 @@ class AssignmentView: UIViewController {
     
     // Update based on tasks
     func update() {
+        print("The completed tasks is \(viewTasksCompleted)")
         setTasksCompleted()
         setProgressBar()
         setPercentProgress()
         setUrgencyLabel()
-        delegate?.change()
+        createChangesStruct()
     }
     
     // Set task label
@@ -94,8 +95,14 @@ class AssignmentView: UIViewController {
         percentageOutput.text = "\(roundedProgress)%"
     }
     
+    //Set urgency label
     func setUrgencyLabel() {
         urgencyOutput.text = "Task is not very urgent"
+    }
+    
+    func createChangesStruct() {
+        let newChanges = Changes(tasksCompleted: viewTasksCompleted, assignmentNumber: viewAssignmentNumber)
+        delegate?.change(new: newChanges)
     }
     
     // Increase tasks

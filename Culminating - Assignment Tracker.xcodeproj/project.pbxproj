@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7D0734E02481B89200FA7A7B /* AssignmentMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0734DF2481B89200FA7A7B /* AssignmentMaker.swift */; };
 		7D24BACF2482E550005B0877 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D24BACE2482E550005B0877 /* Assignment.swift */; };
+		7D42B4DE248D63D800672280 /* Changes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D42B4DD248D63D800672280 /* Changes.swift */; };
 		7DEF80B4247B19330061E2D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEF80B3247B19330061E2D1 /* AppDelegate.swift */; };
 		7DEF80B6247B19330061E2D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEF80B5247B19330061E2D1 /* SceneDelegate.swift */; };
 		7DEF80B8247B19330061E2D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEF80B7247B19330061E2D1 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		7D0734DF2481B89200FA7A7B /* AssignmentMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentMaker.swift; sourceTree = "<group>"; };
 		7D24BACE2482E550005B0877 /* Assignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
+		7D42B4DD248D63D800672280 /* Changes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Changes.swift; sourceTree = "<group>"; };
 		7DEF80B0247B19330061E2D1 /* Culminating - Assignment Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Culminating - Assignment Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DEF80B3247B19330061E2D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DEF80B5247B19330061E2D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			children = (
 				7DEF80B3247B19330061E2D1 /* AppDelegate.swift */,
 				7DEF80B5247B19330061E2D1 /* SceneDelegate.swift */,
+				7D42B4DD248D63D800672280 /* Changes.swift */,
 				7D24BACE2482E550005B0877 /* Assignment.swift */,
 				7DEF80B7247B19330061E2D1 /* ViewController.swift */,
 				7DFD76DF248189DF00F18631 /* AssignmentView.swift */,
@@ -150,6 +153,7 @@
 				7D24BACF2482E550005B0877 /* Assignment.swift in Sources */,
 				7DEF80B8247B19330061E2D1 /* ViewController.swift in Sources */,
 				7D0734E02481B89200FA7A7B /* AssignmentMaker.swift in Sources */,
+				7D42B4DE248D63D800672280 /* Changes.swift in Sources */,
 				7DEF80B4247B19330061E2D1 /* AppDelegate.swift in Sources */,
 				7DEF80B6247B19330061E2D1 /* SceneDelegate.swift in Sources */,
 				7DFD76E0248189DF00F18631 /* AssignmentView.swift in Sources */,
