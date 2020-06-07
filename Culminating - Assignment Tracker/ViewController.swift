@@ -14,11 +14,28 @@ class ViewController: UITableViewController, AssignmentSaver {
     //MARK: Properties
     var assignments:[Assignment] = []
     
-    //MARK: Methods
-    
+    let test1 = Assignment(name: "hi", description: "test", tasks: 4, date: 43, tasksCompleted: 0)
+    let test2 = Assignment(name: "hello", description: "test", tasks: 4, date: 43, tasksCompleted: 0)
 
+    
+    //MARK: Table View
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return assignments.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.text = assignments[indexPath.row].name
+        return cell
+    }
+    
+    //MARK: Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        assignments.append(test1)
+        assignments.append(test2)
         
         navigationController?.navigationBar.prefersLargeTitles = true
         

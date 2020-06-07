@@ -104,7 +104,7 @@ class AssignmentView: UIViewController {
         
     }
     
-    
+    // Decrease tasks
     @IBAction func decreaseTasks(_ sender: Any) {
         
         // If they are trying to decrease the completed tasks when it is 0%, dont decrease
